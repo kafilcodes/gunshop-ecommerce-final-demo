@@ -34,6 +34,10 @@ This guide will help you deploy the frontend on **Vercel** (free) and the backen
    git push -u origin main
    ```
 
+   git remote add origin https://github.com/kafilcodes/gunshop-ecommerce-final-demo.git
+git branch -M main
+git push -u origin main
+
 ---
 
 ## 🖥️ Step 2: Deploy Backend on Render (FREE)
