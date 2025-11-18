@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": "H3c4Z8A2HG8onAlDQAanp",
+      "email": "admin@gunshop.test",
+      "password": "$2a$10$N5af.Bd9eSathEC.zjyRo.V9PzoscQklIYdsA/r8AZGr9SvjHxORi",
+      "role": "admin"
+    }
+  ],
+  "products": [
+    {
+      "id": "IffbROmapbOlaeiRUwhRh",
+      "title": "Tactical Range Backpack",
+      "price": 149.99,
+      "image": "https://images.pexels.com/photos/889709/pexels-photo-889709.jpeg",
+      "description": "Durable range backpack with multiple compartments."
+    },
+    {
+      "id": "8oBjxAx92kwC1AEW39atj",
+      "title": "Precision Optic (Replica)",
+      "price": 299,
+      "image": "https://images.pexels.com/photos/2928147/pexels-photo-2928147.jpeg",
+      "description": "High clarity optic for demonstration purposes."
+    },
+    {
+      "id": "C-X1M9vg6Cp_GsqeP_rZ_",
+      "title": "Training Dummy (Non-functional)",
+      "price": 89.5,
+      "image": "https://images.pexels.com/photos/163480/war-desert-guns-gunshow-163480.jpeg",
+      "description": "Training aid for safe handling practice."
+    }
+  ],
+  "orders": []
+}

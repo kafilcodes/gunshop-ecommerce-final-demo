@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&family=Roboto:wght@300;400;700&display=swap');
+
+:root{
+  --bg:#0f1316;
+  --panel:#141619;
+  --muted:#9aa0a6;
+  --accent:#f08b1a;
+  --card:#181a1c;
+  --white:#fff;
+  --glass: rgba(255,255,255,0.03);
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--white);font-family:Roboto, Arial, sans-serif;-webkit-font-smoothing:antialiased}
+.header{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;background:#0d0f11;border-bottom:1px solid rgba(255,255,255,0.03);position:sticky;top:0;z-index:60}
+.brand{margin:0;font-family:Montserrat, sans-serif;font-weight:800;letter-spacing:1px;color:var(--accent);font-size:24px}
+.navlinks a{color:#cbd2d6;text-decoration:none;margin-left:18px;font-weight:500}
+.navlinks a:hover{color:var(--white)}
+.main{padding:18px 24px 60px;max-width:1200px;margin:0 auto}
+
+/* hero */
+.hero{display:flex;gap:24px;align-items:center;padding:24px 0}
+.hero-left{flex:1;padding:12px}
+.hero-right{flex:1;position:relative}
+.hero-card{background:linear-gradient(90deg,#0f1112 0%, rgba(18,20,22,0.8) 100%);padding:28px;border-radius:6px;min-height:260px;display:flex;flex-direction:column;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+.hero h2{font-family:Montserrat;margin:0;font-size:38px;letter-spacing:1px}
+.hero p{color:var(--muted);max-width:520px;margin-top:10px}
+.hero .cta{margin-top:16px}
+
+/* filters + layout */
+.layout{display:grid;grid-template-columns:260px 1fr;gap:20px;align-items:start}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.navlinks{display:none}}
+
+/* sidebar */
+.sidebar{background:var(--panel);padding:16px;border-radius:8px;position:sticky;top:86px;height:fit-content;box-shadow:0 6px 18px rgba(0,0,0,0.4)}
+.category{padding:10px 12px;border-radius:6px;background:transparent;color:var(--muted);cursor:pointer;margin-bottom:8px}
+.category.active{background:var(--accent);color:#111;font-weight:700}
+.filters{margin-top:12px}
+.search{width:100%;padding:10px;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--white)}
+
+/* featured products */
+.section-title{font-family:Montserrat;font-size:28px;color:var(--white);margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+.card{background:var(--card);border-radius:8px;padding:12px;box-shadow:0 6px 18px rgba(0,0,0,0.5);display:flex;flex-direction:column;transition:transform .22s ease, box-shadow .22s ease;cursor:grab}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(0,0,0,0.6);cursor:pointer}
+.card img{width:100%;height:160px;object-fit:contain;background:white;padding:12px;border-radius:6px}
+.card h3{margin:10px 0 6px;font-size:16px}
+.card p{color:var(--muted);font-size:13px;margin:0 0 8px}
+.card .price{font-weight:700;color:var(--accent);margin-top:auto}
+
+/* badge */
+.badge{position:absolute;top:8px;left:8px;background:var(--accent);color:#fff;padding:6px 8px;border-radius:4px;font-size:12px}
+
+/* floating actions */
+.floats{position:fixed;right:12px;top:40%;display:flex;flex-direction:column;gap:8px;z-index:50}
+.floats a{display:block;background:var(--accent);color:#111;padding:12px;border-radius:6px 0 0 6px;text-decoration:none;box-shadow:0 6px 14px rgba(0,0,0,0.3)}
+
+/* brands strip */
+.brands{display:flex;gap:28px;align-items:center;justify-content:center;padding:18px;background:var(--glass);margin-top:28px;border-radius:6px;overflow:hidden}
+.brands img{height:36px;opacity:0.9;filter:grayscale(1)}
+
+/* news */
+.news{display:grid;grid-template-columns:1fr 300px;gap:16px;margin-top:18px}
+.news .main{background:#0d0f11;padding:16px;border-radius:8px}
+.news .list{display:flex;flex-direction:column;gap:10px}
+
+/* footer */
+.footer{display:flex;gap:24px;padding:36px 0 80px;color:var(--muted);flex-wrap:wrap}
+.footer .col{flex:1;min-width:200px}
+
+/* helper */
+.btn{display:inline-block;padding:10px 14px;border-radius:6px;background:transparent;border:1px solid var(--accent);color:var(--accent);text-decoration:none}
+.hidden{display:none}
+
+/* responsive small */
+@media(max-width:640px){
+  .hero h2{font-size:26px}
+  .card img{height:140px}
+  .sidebar{position:static;margin-bottom:12px}
+  .floats{right:6px}
+  .brands{gap:12px;padding:12px}
+}
+
+/* small animation for appearance */
+.fade-in{animation:fadeUp .5s ease both}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(8px)}
+  to{opacity:1;transform:translateY(0)}
+}
